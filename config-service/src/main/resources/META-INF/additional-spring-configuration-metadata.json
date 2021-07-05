@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "eureka.instance.port",
+  "type": "java.lang.String",
+  "description": "Eureka server port."
+}]}

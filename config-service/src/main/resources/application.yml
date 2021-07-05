@@ -1,0 +1,26 @@
+spring:
+  # Application name
+  application:
+    name: config-service
+
+  # Cloud config server setup
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/SubhankarDas/config.git
+          search-paths:
+          - '*-service'
+
+# Port address
+server:
+  port: 8082
+
+# Register with Eureka discovery service
+eureka:
+  instance:
+    hostname: localhost
+    port: 8080
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/        

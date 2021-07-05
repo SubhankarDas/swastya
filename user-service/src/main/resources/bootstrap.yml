@@ -1,0 +1,37 @@
+spring:
+  # Application name
+  application:
+    name: user-service
+  
+  # Connect to config service
+  cloud:
+    config:
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: config-service
+      retry:
+        initial-interval: 2000
+        multiplier: 1.5
+        max-interval: 60000
+        max-attempts: 100
+
+# Port address
+server:
+  port: 8081
+
+# Register on Eureka server  
+eureka:
+  instance:
+    hostname: localhost
+    port: 8080
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+
+# Actuator endpoints management      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

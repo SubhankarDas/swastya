@@ -1,4 +1,4 @@
-package com.codespark.discovery_service;
+package com.codespark.discoveryservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

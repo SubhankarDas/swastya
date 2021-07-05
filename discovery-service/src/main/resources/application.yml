@@ -1,10 +1,13 @@
 spring:
+  # Application name
   application:
-    name: discovery-service 						        			     # Application name
+    name: discovery-service
 
+# Port address
 server:
-  port: 8080 									                		         # Port address
-  
+  port: 8080
+
+# Eureka discovery server setup  
 eureka:
   instance:
     hostname: localhost
