@@ -2,7 +2,7 @@ spring:
   # Application name
   application:
     name: user-service
-  
+
   # Connect to config service
   cloud:
     config:
@@ -20,16 +20,15 @@ spring:
 server:
   port: 8081
 
-# Register on Eureka server  
+# Register on Eureka discovery service
 eureka:
   instance:
     hostname: localhost
-    port: 8080
   client:
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
+      defaultZone: http://${eureka.instance.hostname}:8080/eureka/
 
-# Actuator endpoints management      
+# Actuator endpoints
 management:
   endpoints:
     web:

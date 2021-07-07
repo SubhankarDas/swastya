@@ -3,14 +3,14 @@ spring:
   application:
     name: config-service
 
-  # Cloud config server setup
+  # Cloud config service setup
   cloud:
     config:
       server:
         git:
           uri: https://github.com/SubhankarDas/config.git
           search-paths:
-          - '*-service'
+            - '*-service'
 
 # Port address
 server:
@@ -20,7 +20,6 @@ server:
 eureka:
   instance:
     hostname: localhost
-    port: 8080
   client:
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/        
+      defaultZone: http://${eureka.instance.hostname}:8080/eureka/
