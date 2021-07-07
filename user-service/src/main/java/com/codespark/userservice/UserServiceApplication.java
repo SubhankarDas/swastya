@@ -19,9 +19,14 @@ public class UserServiceApplication {
 @RequestMapping
 class UserController {
 
-	@GetMapping("/us/msg")
-	public String message() {
-		return "Test Message!";
+	@GetMapping("/v1/users")
+	public String usersv1() {
+		return "users v1";
 	}
 
+	@GetMapping("/v2/users")
+	public String usersv2() {
+		return "users v2";
+	}
+	
 }
