@@ -1,0 +1,21 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    ports:
+    - 3307:3306
+    restart: always
+    environment:
+      MYSQL_DATABASE: swastya
+      MYSQL_USER: swastyadbuser
+      MYSQL_PASSWORD: swastyadbuser@123
+      MYSQL_ROOT_PASSWORD: admin@123
+    volumes:
+    - mysql_data:/var/lib/mysql
+    networks:
+    - backend
+volumes:
+  mysql_data: null
+networks:
+  backend: null

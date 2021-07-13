@@ -23,3 +23,11 @@ eureka:
   client:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:8080/eureka/
+
+# Use asymmetric key (RSA key pair) encryption for properties      
+encrypt:
+  keyStore:
+    location: classpath:/encryptionkey.jks
+    password: swastyapass
+    alias: swastyakey
+    secret: swastyasecret
